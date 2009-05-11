@@ -1,8 +1,23 @@
-<project name="tinyMCE-gwt">
+<project name="tinyMCE-gwt" default="make-jar">
 	<target name="make-jar" description="tinyMCE-gwt">
-		<jar destfile="build/tinyMCE-gwt.jar">
-			<fileset dir="bin">
+		
+		<delete dir="dist"/>
+
+		<mkdir dir="dist"/>
+		
+		<jar destfile="dist/tinyMCE-gwt.jar" >
+			<fileset dir="bin" >
+				<exclude name="gr/open/client/TinymceGwt.*"/>
+				<exclude name="gr/open/TinymceGwt.*"/>
 				<include name="gr/**/*"/>
+			</fileset>
+			<fileset dir="src" >
+				<exclude name="gr/open/client/TinymceGwt.*"/>
+				<exclude name="gr/open/TinymceGwt.*"/>
+				<include name="gr/open/client/**/*"/>
+			</fileset>
+			<fileset dir="build" >
+				<include name="**/*"/>
 			</fileset>
 		</jar>
 	</target>
