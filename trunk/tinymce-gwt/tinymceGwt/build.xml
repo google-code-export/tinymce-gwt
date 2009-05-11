@@ -2,8 +2,8 @@
 	<target name="properties" >
 		<echo message="Loading build properties file" />
 
-		<property file="build/build.properties" />
-		<loadproperties srcFile="build/build.properties"/>
+		<property file="help-files/build.properties" />
+		<loadproperties srcFile="help-files/build.properties"/>
 	</target>
 	
 	<target name="make-jar" depends="properties" description="tinyMCE-gwt">
@@ -23,7 +23,7 @@
 				<exclude name="gr/open/${module.name}.*"/>
 				<include name="gr/open/client/**/*"/>
 			</fileset>
-			<fileset dir="build" >
+			<fileset dir="help-files" >
 				<include name="**/*"/>
 			</fileset>
 		</jar>
