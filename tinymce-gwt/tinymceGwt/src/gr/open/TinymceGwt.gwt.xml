@@ -18,5 +18,5 @@
     
       <!-- Specify the application specific style sheet.              -->
       <stylesheet src='TinymceGwt.css' />
-	  <script src='tiny_mce/tiny_mce_src.js' />
+	  <script src='tiny_mce_editor/tiny_mce_src.js' />
 </module>
