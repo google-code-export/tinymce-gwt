@@ -1,0 +1,8 @@
+<module>
+      <inherits name='com.google.gwt.user.User'/>
+      <inherits name='com.google.gwt.user.theme.standard.Standard'/>
+
+      <stylesheet src='TinymceGwt.css' />
+      <public path="public"/>
+	  <script src='tiny_mce_editor/tiny_mce_src.js' />
+</module>
