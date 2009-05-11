@@ -24,6 +24,7 @@
  */
 package gr.open.client;
 
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.Command;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.DeferredCommand;
@@ -48,6 +49,10 @@ public class TinyMCE extends Composite {
 	
 	public TinyMCE(AbstractTinyMCEConfiguration config) {
 		super();
+		if (config == null) {
+			GWT.log("The configuration cannot be null",	null);
+			return;
+		}
 		this.config = config;
 		initWidget(initTinyMCE());
 	}
