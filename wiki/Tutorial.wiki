@@ -4,6 +4,15 @@
 
 It is really simple to use and configure the editor at your needs. In the future there will be more funtionality through the java code. For now you can only set the init parameters using a configuration instance.
 
+== Step 1 ==
+Copy the jar in the WEB_INF/lib directory
+
+== Step 2 ==
+In your module xml configuration file insert the line
+{{{
+<inherits name="gr.open.TinymceGwt"/>
+}}}
+
 
 = Details =
 
