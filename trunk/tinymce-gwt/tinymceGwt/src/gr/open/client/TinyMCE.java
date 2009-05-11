@@ -52,7 +52,6 @@ public class TinyMCE extends Composite {
 		initWidget(initTinyMCE());
 	}
 	
-	
 	public TinyMCE() {
 		this(new DefaultTinyMCEConfiguration());
 	}

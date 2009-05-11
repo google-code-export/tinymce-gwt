@@ -1,0 +1,9 @@
+<project name="tinyMCE-gwt">
+	<target name="make-jar" description="tinyMCE-gwt">
+		<jar destfile="build/tinyMCE-gwt.jar">
+			<fileset dir="bin">
+				<include name="gr/**/*"/>
+			</fileset>
+		</jar>
+	</target>
+</project>
