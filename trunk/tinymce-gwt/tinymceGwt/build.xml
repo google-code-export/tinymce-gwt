@@ -1,19 +1,26 @@
 <project name="tinyMCE-gwt" default="make-jar">
-	<target name="make-jar" description="tinyMCE-gwt">
+	<target name="properties" >
+		<echo message="Loading build properties file" />
+
+		<property file="build/build.properties" />
+		<loadproperties srcFile="build/build.properties"/>
+	</target>
+	
+	<target name="make-jar" depends="properties" description="tinyMCE-gwt">
 		
 		<delete dir="dist"/>
 
 		<mkdir dir="dist"/>
 		
-		<jar destfile="dist/tinyMCE-gwt.jar" >
+		<jar destfile="dist/${module.name}-v${version}.jar" >
 			<fileset dir="bin" >
-				<exclude name="gr/open/client/TinymceGwt.*"/>
-				<exclude name="gr/open/TinymceGwt.*"/>
+				<exclude name="gr/open/client/${module.name}.*"/>
+				<exclude name="gr/open/${module.name}.*"/>
 				<include name="gr/**/*"/>
 			</fileset>
 			<fileset dir="src" >
-				<exclude name="gr/open/client/TinymceGwt.*"/>
-				<exclude name="gr/open/TinymceGwt.*"/>
+				<exclude name="gr/open/client/${module.name}.*"/>
+				<exclude name="gr/open/${module.name}.*"/>
 				<include name="gr/open/client/**/*"/>
 			</fileset>
 			<fileset dir="build" >
